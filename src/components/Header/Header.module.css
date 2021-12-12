@@ -1,0 +1,16 @@
+.header {
+  width: 100vw;
+  height: 60px;
+  background-color: rgb(231, 231, 231);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.headerTitle {
+  margin: 0 auto;
+  padding: 0;
+  width: 80vw;
+}
