@@ -1,0 +1,18 @@
+.wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.425);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  width: 50vw;
+  min-height: 50vh;
+  background-color: #fff;
+  border-radius: 5px;
+}

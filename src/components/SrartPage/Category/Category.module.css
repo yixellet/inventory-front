@@ -1,0 +1,12 @@
+.menuItem {
+  margin: 10px;
+}
+
+.link {
+  text-decoration: none;
+  color: #000;
+}
+
+.link:hover {
+  color: rgb(129, 129, 129);
+}

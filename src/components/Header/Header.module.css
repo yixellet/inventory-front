@@ -9,7 +9,9 @@
   align-items: center;
 }
 
-.headerTitle {
+.headerLink {
+  text-decoration: none;
+  color: #000;
   margin: 0 auto;
   padding: 0;
   width: 80vw;

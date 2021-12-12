@@ -1,0 +1,17 @@
+.article {
+  width: 80vw;
+  margin: 10px auto 0;
+  background-color: rgb(231, 231, 231);
+  min-height: 300px;
+  border-radius: 5px;
+}
+
+.startMenu {
+  margin: 20px;
+}
+
+.menuItemsList {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}

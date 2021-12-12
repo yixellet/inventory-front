@@ -5,9 +5,9 @@ class FiltersPanel extends React.Component {
 
   render() {
     return (
-      <div>
-        
-      </div>
+      <aside className={styles.filtersPanel}>
+        filters here
+      </aside>
     )
   }
 }
