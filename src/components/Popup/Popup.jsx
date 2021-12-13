@@ -18,13 +18,22 @@ class Popup extends React.Component {
           parent: data.description
         })
       })
+    const arr = []
+    this.props.data.inventory.length !== 0 &&
+    this.props.data.inventory.forEach((itemId) => {
+      this.props.api.getSingleInventoryItem(itemId)
+        .then((data) => {arr.push(data)})
+    })
+    console.log(arr)
+    this.setState({
+      children: arr
+    })
   }
 
   render() {
     return (
-      <div ref={this.ref} className={styles.wrapper}>
+      <div className={styles.wrapper}>
         <div className={styles.popup}>
-          <button onClick={this.props.closePopup}>Закрыть</button>
           <p>{this.props.data.model}</p>
           <h2 className={styles.title}>{this.props.data.description} <span>(s/n {this.props.data.serial_number})</span></h2>
           <p>{this.props.data.info}</p>
@@ -32,8 +41,19 @@ class Popup extends React.Component {
           <p>Ответственное лицо: {this.props.data.owner}</p>
           {
             this.props.data.parent &&
-            <p>Входит в состав <span onClick={() => this.props.changeInventory(this.props.data.pk)}>{this.state.parent}</span></p>
+            <p>Входит в состав {this.state.parent}</p>
           }
+          {
+            this.props.data.inventory.length !== 0 &&
+            <ul>Комплектующие:
+              {
+                this.state.children.map((item) => {
+                  return <li key={item.pk}>{item.description}</li>
+                })
+              }
+            </ul>
+          }
+          <button className={styles.closeButton} onClick={this.props.closePopup}>Закрыть</button>
         </div>
       </div>
     )

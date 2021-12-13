@@ -15,7 +15,6 @@ class SearchPage extends React.Component {
     }
     this.handleOpenPopup = this.handleOpenPopup.bind(this)
     this.handleClosePopup = this.handleClosePopup.bind(this)
-    this.handleChangeInventory = this.handleChangeInventory.bind(this)
   }
 
   componentDidMount() {
@@ -42,11 +41,6 @@ class SearchPage extends React.Component {
       isPopupOpen: false,
       popupData: null
     })
-  }
-
-  handleChangeInventory(id) {
-    this.handleClosePopup()
-    this.handleOpenPopup(id)
   }
 
   render() {
